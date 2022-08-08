@@ -1,0 +1,22 @@
+
+for i in range(int(input())):
+    a,b=list(map(int,input().split()))
+    if b<a*2:
+        print(b,b)
+    elif b>=2*a and b%a==0:
+        print(b,a)
+    else:
+        ans=0
+        ans1=0
+        div=b//2
+        if b>=2*a:
+            div=2*a
+        m=0
+        for i in range(a,div):
+            d=b//i
+            cmin=(i*d)-i
+            if cmin>m:
+                ans=i
+                ans1=i*d
+                m=cmin
+        print(ans,ans1)
