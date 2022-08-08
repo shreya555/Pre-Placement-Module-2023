@@ -1,0 +1,14 @@
+t=int(input())
+for i in range (t):
+    n,x=list(map(int,input().split()))
+    if(n<=x):
+        print(0)
+    else:
+        z= n-x
+        r=z/4
+        if(z%4==0):
+            print(int(r))
+        else:
+            r=r+1
+            print(int(r))
+    
