@@ -1,0 +1,17 @@
+t=int(input())
+for i in range(t):
+    n,k=map(int,input().split())
+    s=list(input())
+    count=0
+    for i in range(n//2):
+        if s[i]!=s[n-i-1]:
+            count+=1
+    if k>=count:
+        if (k-count)%2==0:
+            print('YES')
+        elif (n%2!=0):
+            print('YES')
+        else:
+            print('NO')
+    else:
+        print('NO')
