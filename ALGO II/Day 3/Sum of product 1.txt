@@ -1,0 +1,14 @@
+# cook your dish here
+for i in range(int(input())):
+    size=int(input())
+    arr=list(map(int,input().split()))
+    ans=0
+    a=0
+    for i in range(size):
+        if arr[i]==1:
+            a+=1
+        else:
+            ans+=a*(a+1)//2
+            a=0
+    ans+=a*(a+1)//2
+    print(ans)
